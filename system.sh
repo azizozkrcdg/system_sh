@@ -37,9 +37,9 @@ while true; do
         3)
             ping -c 2 8.8.8.8 > /dev/null 2>&1
             if [ $? -eq 0 ]; then
-                echo "İnternet bağlantısı aktif ✅"
+                echo "İnternet bağlantısı aktif "
             else
-                echo "İnternet bağlantısı yok ❌"
+                echo "İnternet bağlantısı yok "
             fi
             ;;
         4)
@@ -55,7 +55,7 @@ while true; do
             ;;
         7)
             sudo systemctl restart nginx
-            echo "Nginx yeniden başlatıldı ✅"
+            echo "Nginx yeniden başlatıldı "
             ;;
         8)
             echo "Son 10 SSH hata kaydı:"
@@ -68,7 +68,7 @@ while true; do
         10)
             read -p "İzin vermek istediğin portu gir (ör: 22, 80, 443): " port
             sudo ufw allow $port/tcp
-            echo "$port numaralı port açıldı ✅"
+            echo "$port numaralı port açıldı "
             ;;
         11)
             echo "Çıkılıyor..."
